@@ -1,0 +1,46 @@
+input[type='checkbox']
+  appearance: none
+  border: 1.5px solid $color_neutral_tertiary
+  width: 18px
+  height: 18px
+  border-radius: 4px
+  position: relative
+  margin: 0
+  margin-right: 10px
+  padding: 0
+  flex-shrink: 0
+  +anim(150ms)
+
+  &:focus
+    outline: 0
+    box-shadow: 0 0 1px 1.5px #2789FF
+    +anim(150ms)
+
+  &:hover
+    border-color: $color_neutral_secondary
+    +anim(150ms)
+
+  &:checked
+    border-color: $color_accent
+    background-color: $color_accent
+    +anim(150ms)
+
+    &::before
+      opacity: 1
+      transform: scale(1)
+      +anim(200ms)
+
+  &::before
+    content: ""
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    right: 0
+    opacity: 0
+    transform: scale(0)
+    background-repeat: no-repeat
+    background-position: 45% 45%
+    background-size: 15px
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='14'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M14.3.6l2 2.1L6 13.4.7 7.9l2-2L6 9.1 14.3.6z' clip-rule='evenodd'/%3E%3C/svg%3E")
+    +anim(200ms)

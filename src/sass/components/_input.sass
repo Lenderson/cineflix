@@ -1,0 +1,31 @@
+input[type='text']
+  appearance: none
+  height: 28px
+  line-height: 41px
+  letter-spacing: 0.3px
+  font-size: 15px
+  box-sizing: border-box
+  padding: 0 12px
+  border-radius: 6px
+  border: none
+  border: 1px solid transparentize($color_neutral_secondary, .35)
+  box-shadow: inset 0px 2px 4px -1px rgba(9, 30, 66, 0.15)
+  background-color: #ffffff
+  color: $color_neutral_primary
+  display: inline-block
+  position: relative
+  width: 100%
+  +anim(150ms)
+
+  &::placeholder
+    color: transparentize($color_neutral_secondary, .3)
+
+  &.--accent:focus
+    outline: none
+    box-shadow: inset 0px 2px 4px -1px rgba(9, 30, 66, 0.15), 0 0 0 2px $color_accent
+    +anim(150ms)
+
+  &:focus
+    outline: none
+    box-shadow: inset 0px 2px 4px -1px rgba(9, 30, 66, 0.15), 0 0 0 1.6px $color_accent
+          +anim(150ms)

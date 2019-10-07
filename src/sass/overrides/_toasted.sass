@@ -1,0 +1,29 @@
+.toasted-container,
+.toasted-container.full-width
+  align-items: flex-start
+
+.toasted
+  font-family: $font-primary !important
+  border-radius: 8px !important
+  padding: 12px 24px !important
+  letter-spacing: .44px
+  line-height: 1 !important
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  background: $color-neutral-primary
+  color: white
+
+  &.error
+    background: $color_danger
+
+  small
+    opacity: .65
+
+  svg
+    width: 24px
+    height: 24px
+    fill: none
+    stroke: white
+    stroke-width: 2
+    margin-right: 16px

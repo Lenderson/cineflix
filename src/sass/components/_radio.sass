@@ -1,0 +1,42 @@
+input[type='radio']
+  appearance: none
+  border: 1.5px solid $color_neutral_tertiary
+  width: 18px
+  height: 18px
+  margin: 0
+  border-radius: 50%
+  position: relative
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  padding: 0
+  flex-shrink: 0
+  +anim(150ms)
+
+  &:focus
+    outline: 0
+    box-shadow: 0 0 1px 1.5px #2789FF
+    +anim(150ms)
+
+  &:hover
+    border-color: $color_neutral_secondary
+    +anim(150ms)
+
+  &:checked
+    border-color: $color_accent
+    background-color: $color_accent
+    +anim(150ms)
+
+    &::before
+      opacity: 1
+      transform: scale(1)
+      +anim(200ms)
+
+  &::before
+    content: ""
+    width: 60%
+    height: 60%
+    opacity: 0
+    background: white
+    border-radius: 50%
+    +anim(200ms)

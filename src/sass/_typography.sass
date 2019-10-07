@@ -1,0 +1,169 @@
+// Typography
+
+@import './webfont/avenir'
+
+$font-primary: 'Avenir', Helvetica, Arial, sans-serif
+
+// Reset
+body, html
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -webkit-text-size-adjust: 100%
+  color: $color-neutral-primary
+
+h1, h2, h3, h4, h5, h6, p, span
+  color: inherit
+  margin: 0
+  padding: 0
+  -webkit-margin-before: 0
+  -webkit-margin-after: 0
+  -webkit-margin-start: 0
+  -webkit-margin-end: 0
+  -webkit-text-size-adjust: 100%
+
+a
+  text-decoration: none
+  color: inherit
+
+dl, dt, dd
+  -webkit-margin-before: 0
+  -webkit-margin-after: 0
+  -webkit-margin-start: 0
+  -webkit-margin-end: 0
+  margin: 0
+
+dl ~ dl
+  margin-top: 48px
+
+dt
+  font-size: 13px
+  font-weight: 500
+  letter-spacing: 0.33px
+  margin-bottom: 4px
+
+// Title 1
+h1
+  font-family: $font-primary
+  font-size: 48px
+  font-weight: 600
+  line-height: 1.3
+
+  +mq_small
+    font-size: 36px
+
+  &.title-jumbo
+    font-size: 96px
+
+// Title 2
+h2
+  font-family: $font-primary
+  font-size: 36px
+  font-weight: 600
+  line-height: 1.3
+
+  +mq_small
+    font-size: 28px
+
+  & ~ p
+    -webkit-margin-before: .5em
+
+
+// Title 3
+h3
+  font-family: $font-primary
+  font-size: 28px
+  font-weight: 600
+  line-height: 1.3
+
+  +mq_small
+    font-size: 24px
+
+
+// Title 4
+h4
+  font-family: $font-primary
+  font-size: 20px
+  font-weight: 600
+  line-height: 1.3
+
+  +mq_small
+    font-size: 18px
+
+
+// Title 5
+h5
+  font-family: $font-primary
+  font-size: 16px
+  font-weight: 600
+  line-height: 1.3
+
+// Title 6
+h6
+  font-family: $font-primary
+  font-size: 16px
+  font-weight: 600
+  line-height: 110%
+
+
+// Body
+p, .type-body
+  font-family: $font-primary
+  font-size: 16px
+  font-weight: 400
+  letter-spacing: .38px
+
+  +mq_small
+    font-size: 15px
+
+
+// Body 2
+span, .type-body-2, input::placeholder, input
+  font-family: $font-primary
+  font-size: 14.5px
+  font-weight: 400
+  line-height: 1.35
+  letter-spacing: .2px
+  
+// Label
+label
+  font-family: $font-primary
+  color: $color-neutral-secondary
+  display: block
+  font-weight: 600
+  font-size: 13px
+  letter-spacing: 0.44px
+  margin-bottom: 6px
+
+  
+// Small
+small
+  font-family: $font-primary
+  font-size: 13px
+  line-height: 1.2
+  font-weight: 500
+  letter-spacing: .4px
+
+  &.micro
+    font-size: 10px
+    line-height: 1.2
+
+
+// Button
+a, 
+button, 
+.btn
+  font-family: $font-primary
+  font-size: 15px
+  letter-spacing: .44px
+  line-height: 100%
+  font-weight: 600
+
+
+// Button Small
+.btn--small
+  font-family: $font-primary
+  font-size: 13px
+  line-height: 100%
+  font-weight: 600
+  letter-spacing: .3px
