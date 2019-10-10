@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import MoviesBody from '@/components/MoviesBody'
+import MoviesBody from '@/movie/components/MoviesBody'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {

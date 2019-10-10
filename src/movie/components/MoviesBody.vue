@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import MoviePoster from '@/components/MoviePoster'
+import MoviePoster from './MoviePoster'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
@@ -45,6 +45,10 @@ export default {
     ...mapGetters(['favorites'])
   },
 
+  created(){
+    console.log(this.movies)
+  },
+
   methods: {
     ...mapActions(['addToFavorites', 'removeFromFavorites']),
 
@@ -57,7 +61,7 @@ export default {
     },
 
     isFavorited(movieId) {
-      return !!this.favorites.find(movie => movie.id === movieId)
+      return !!(this.favorites && this.favorites.find(movie => movie.id === movieId))
     },
 
     toggleFavorite(selectedMovie) {

@@ -17,8 +17,8 @@
         </div>
 
         <Icon
-          class="poster__favorite-button"
           :class="{ '--favorited': isFavorited }"
+          class="poster__favorite-button"
           type="heart"
           @click.stop="$emit('favorite')"
         />
