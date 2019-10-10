@@ -80,7 +80,7 @@ export default {
 $shadow-color: transparentize($color_neutral_primary, 0.6)
 
 .poster
-  width: fit-content
+  justify-self: center
 
   &__image
     display: flex
