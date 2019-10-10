@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import MoviesBody from '@/components/MoviesBody'
+import MoviesBody from '../components/MoviesBody'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'Movies',
-
+   
   components: {
     MoviesBody
   },
@@ -27,6 +27,7 @@ export default {
     ...mapGetters(['movies']),
 
     filteredMovies() {
+      console.log(this.movies)
       return this.movies.filter(movie =>
         movie.title.toLowerCase().includes(this.searchText.toLowerCase())
       )

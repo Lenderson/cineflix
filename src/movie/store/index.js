@@ -1,5 +1,5 @@
-import apiMovie from '@/api/movie'
-import * as types from './mutation-types'
+import apiMovie from '../api'
+import * as types from '@/store/mutation-types'
 
 const state = {
   movies: [],
@@ -46,7 +46,7 @@ const actions = {
   },
 
   getFavoriteMovies: ({ commit }) => {
-    const favoriteMovies = JSON.parse(localStorage.getItem('favorites'))
+    const favoriteMovies = JSON.parse(localStorage.getItem('favorites')) || []
     commit(types.SET_FAVORITES, favoriteMovies)
   },
 

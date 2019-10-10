@@ -24,8 +24,8 @@
         </div>
 
         <SButton
-          class="movie-infos__favorite-button"
           :class="{ '--favorited': isFavorited }"
+          class="movie-infos__favorite-button"
           theme="float"
           @click="toggleFavorite"
         >
@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import apiMovie from '@/api/movie'
+import apiMovie from '../api'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
@@ -78,9 +78,9 @@ export default {
     ...mapGetters(['favorites']),
 
     isFavorited() {
-      return !!this.favorites.find(
+      return !!(this.favorites && this.favorites.find(
         movie => parseInt(movie.id) === parseInt(this.movieId)
-      )
+      ))
     }
   },
 

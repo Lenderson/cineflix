@@ -1,4 +1,4 @@
-import http from './http'
+import http from '@/api/http'
 
 const getPopularMovies = () => {
   return http.get('/movie/now_playing')
