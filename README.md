@@ -1,4 +1,4 @@
-# sas-frontend-boilerplate
+# Cineflix
 
 ## Project setup
 ```
