@@ -1,5 +1,5 @@
 {
-  "name": "sas-frontend-boilerplate",
+  "name": "cineflix",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,7 +15,6 @@
   "dependencies": {
     "axios": "^0.18.0",
     "feather-icons": "^4.9.0",
-    "register-service-worker": "^1.0.0",
     "v-tooltip": "^2.0.0-rc.33",
     "vue": "^2.5.17",
     "vue-feather": "^0.2.1",
